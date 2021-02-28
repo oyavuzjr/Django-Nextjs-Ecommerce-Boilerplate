@@ -1,0 +1,9 @@
+{% extends "admin/change_form.html" %}
+{% block form_top %}
+{% if image_urls%}
+<h3>Images</h3>
+{% for image in image_urls%}
+<img src={{image}} />
+{% endfor %}
+{% endif %}
+{% endblock %}

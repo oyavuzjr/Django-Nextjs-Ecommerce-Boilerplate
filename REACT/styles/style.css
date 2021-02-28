@@ -1,0 +1,25 @@
+.gray-hover:hover {
+  background-color: rgba(211, 211, 211, 0.488);
+}
+
+#loading-screen {
+  height: 100vh;
+  text-align: center;
+}
+
+#loading-position {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pointy {
+  cursor: pointer;
+}
+
+.container {
+  font-size: 150%;
+}
