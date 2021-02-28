@@ -44,7 +44,7 @@ const Product = ({ product }) => {
         <p>
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         </p>
-        <AddToCart id={product.id} image={product.images[0].image} price={product.prive} name={product.name} size={40}>
+        <AddToCart id={product.id} image={product.images[0].image} price={product.price} name={product.name} size={40}>
         <div type="button" class="btn btn-primary btn-lg btn-block">Add To Cart!</div>
         </AddToCart>
       </div>
