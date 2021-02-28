@@ -40,9 +40,9 @@ Set up the React project
 </li>
 <li>
 Inside the REACT folder, create a file called .env and populate it with the following variables. You can adjust to your own use case.
-<br/><code>API_ENDPOINT="http://localhost:8000/api/"<br/>
-IMAGE_ENDPOINT="http://localhost:8000/_next"<br/>
-GA_TRACKING_ID="..."</code>
+<br/><code>API_ENDPOINT="http://localhost:8000/api/"</code><br/>
+<code>IMAGE_ENDPOINT="http://localhost:8000/_next"</code><br/>
+<code>GA_TRACKING_ID="..."</code>
 </li>
 <li>
 finally, lets build the static website. <span style="color:'red'">The server has to be running when you are building it! </span>
