@@ -42,7 +42,9 @@ const Nav = () => {
             </Link>
           </li>
         </ul>
+        <div className="mr-4">
         <AuthHandler />
+        </div>
         <div>
         <Link href="/cart">
         <a>

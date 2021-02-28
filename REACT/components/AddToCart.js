@@ -65,7 +65,7 @@ const AddToCart = ({ children, name, id, price, image, size, action="add", useSp
         <a onClick={handleClick}>{children}</a>
       ) : (
         <div className="text-center">
-        <div class="spinner-border text-dark" role="status" style={{"height":size,"width":size}}>
+        <div class="spinner-border text-danger" role="status" style={{"height":size,"width":size}}>
           <span class="sr-only">Loading...</span>
         </div>
         </div>
