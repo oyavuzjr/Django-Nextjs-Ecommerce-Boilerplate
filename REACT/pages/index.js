@@ -13,11 +13,12 @@ const Index = () => {
       <hr />
       <div className="text-center">
         <img
+          className="mb-5"
           style={{ width: "70%" }}
           src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
         />
       </div>
-      <h1 className="mt-4">Redux Counter</h1>
+      <h1  className="mt-5" className="mt-4">Redux Counter</h1>
       <hr/>
       <h2>{counter}</h2>
       <button className="btn btn-secondary" type="button" onClick={() => decrement()}>

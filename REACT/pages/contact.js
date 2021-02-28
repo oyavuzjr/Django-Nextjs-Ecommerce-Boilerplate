@@ -6,6 +6,7 @@ const Contact = () => {
 
   return (
     <>
+      <h1>Contact</h1>
       <hr />
       <p>Thank you for visiting our website!</p>
       <p>Please reach us at ecommerce@example.com</p>

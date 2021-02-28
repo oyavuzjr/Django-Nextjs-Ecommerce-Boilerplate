@@ -1,19 +1,14 @@
 import React from "react";
 import Product from "../../components/Product";
 import Carousel from "../../components/Carousel";
-
 import { useStoreState, useStoreActions } from "easy-peasy";
 
 const Products = ({products}) => {
-
   return (
     <>
       <h1>Products</h1>
       <hr />
-      <p>Browse our Products!</p>
-
-
-      
+      <p>Browse our Products!</p>   
       <div className="row">
       {products.map((product) => (
         <Product
@@ -23,15 +18,6 @@ const Products = ({products}) => {
           image={product.images.length>0?product.images[0].image:""}
         />
       ))}
-
-      {/* {products.map((product) => (
-        <Carousel
-          name={product.name}
-          id={product.id}
-          price={product.price}
-          image={product.image}
-        />
-      ))} */}
 
       </div>
     </>

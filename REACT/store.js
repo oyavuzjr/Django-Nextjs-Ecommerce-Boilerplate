@@ -36,6 +36,7 @@ const cart = {
           item.quantity+=payload.quantity
         }
       }) 
+      state.items=state.items.filter(item=>item.quantity>0)
     } else {
       state.items.push(payload);
     }
