@@ -1,7 +1,5 @@
----
-title: Django-Nextjs-Ecommerce-Boilerplate
----
 ## Introduction
+<small><a href="https://django-nextjs-ecommerce-boilerplate.talatorhanorhan.repl.co/">check out Live demo here</a></small>
 <p>This is a full stack e-commerce application that I have been building in my spare time. It has many built in features I find myself reimplementing every time I want to prototype an experimental product.</p>
 <p>Although my passion is to learn how machine learning and artificial intelligence can improve user experience and engagement, it is crucial to understand how that part fits into a monstrously complicated system. I wanted this project to be a simple template for any such experimentation with ML models. </p>
 <p>Attempting to keep my promise of simplicity, I decided that Django would be a good option for the back end due to its incredible versatility and developer experience. The Django admin is the perfect interface to modify and use due to its proximity to the database. But the purpose of admin panel isin't merely to display tables. The admin templates are infinitely customizable,  so one could add custom analytics, graphs models to any page, using the same tools they would in python.<p/>
