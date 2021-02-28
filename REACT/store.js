@@ -33,7 +33,7 @@ const cart = {
     if (state.items.map((x) => x.id).includes(payload.id)) {
       state.items.forEach((item) => {
         if(item.id===payload.id){
-          item.quantity+=1
+          item.quantity+=payload.quantity
         }
       }) 
     } else {

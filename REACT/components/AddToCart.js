@@ -51,7 +51,7 @@ const AddToCart = ({ children, name, id, price, image, size, action="add", useSp
       if (token !== "") {
         res();
       } else {
-        addToCart({ name, id, price, image, quantity: 1 });
+        addToCart({ name, id, price, image, quantity: action==="add"?1:-1 });
         setTimeout(function () {
           popNotification();
         }, 5000);
