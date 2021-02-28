@@ -13,7 +13,7 @@ Clone the repository.
 </li>
 <li>
 Check your python version. My version is 3.8.7.  
-<br/><code>python --version</code>. 
+<br/><code>python --version</code>
 </li>
 <li>
 Install the python packages using requirements.txt.
@@ -23,7 +23,7 @@ Install the python packages using requirements.txt.
 As usual with Django, we will initialize the database using the two commands.  
 <br/><code>python manage.py makemigrations</code>
 <br/><code>python manage.py migrate</code>
-</li>.
+</li>
 <li>
 Create super user for admin login
 <br/><code>python manage.py createsuperuser</code>
@@ -45,9 +45,9 @@ IMAGE_ENDPOINT="http://localhost:8000/_next"<br/>
 GA_TRACKING_ID="..."</code>
 </li>
 <li>
-finally, lets build the static website. <span style="color:'red'">The server has to be running when you are building it! </span>.
+finally, lets build the static website. <span style="color:'red'">The server has to be running when you are building it! </span>
 <br/><code>npm run build</code>
 <br/><br/>Done.
 </li>
-</ol>. 
+</ol>
 
