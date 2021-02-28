@@ -1,3 +1,6 @@
+---
+title: Django-Nextjs-Ecommerce-Boilerplate
+---
 ## Introduction
 <small><a href="https://django-nextjs-ecommerce-boilerplate.talatorhanorhan.repl.co/">check out Live demo here</a></small>
 <p>This is a full stack e-commerce application that I have been building in my spare time. It has many built in features I find myself reimplementing every time I want to prototype an experimental product.</p>
