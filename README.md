@@ -1,3 +1,6 @@
+---
+title: Django-Nextjs-Ecommerce-Boilerplate
+---
 ## Introduction
 <p>This is a full stack e-commerce application that I have been building in my spare time. It has many built in features I find myself reimplementing every time I want to prototype an experimental product.</p>
 <p>Although my passion is to learn how machine learning and artificial intelligence can improve user experience and engagement, it is crucial to understand how that part fits into a monstrously complicated system. I wanted this project to be a simple template for any such experimentation with ML models. </p>
