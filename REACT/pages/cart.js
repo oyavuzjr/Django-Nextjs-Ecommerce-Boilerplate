@@ -69,7 +69,7 @@ const Cart = () => {
           <div className="card text-white bg-primary mb-3">
             <div className="card-header">Checkout</div>
             <div className="card-body">
-              <h4 className="card-title">Your Total is ${cart.map(item=>parseFloat(item.price*item.quantity).toFixed(2))}</h4>
+              <h4 className="card-title">Your Total is ${(cart.map(item=>item.price*item.quantity).reduce((a, b) => a + b, 0)).toFixed(2)}</h4>
               <p className="card-text">How would you like to pay?</p>
             </div>
           </div>
