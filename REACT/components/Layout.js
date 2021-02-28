@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
       ) : (
         <div id="loading-screen">
           <div id="loading-position" className="text-center">
-            <div className="spinner-border text-danger" style={{height:"5rem",width:"5rem"}} role="status">
+            <div className="spinner-border" style={{height:"5rem",width:"5rem"}} role="status">
               <span class="sr-only">Loading...</span>
             </div>
             <div className="mt-4">
