@@ -1,3 +1,4 @@
+
 ---
 title: Django-Nextjs-Ecommerce-Boilerplate
 ---
@@ -55,3 +56,55 @@ finally, lets build the static website. <span style="color:'red'">The server has
 </li>
 </ol>
 
+## Features 
+<ul>
+<li>
+Statically generated, almost fully functional ecommerce web application built with React.
+</li>
+<li>
+Google Analytics works out of the box when the proper ID is set in <code>.env</code>
+</li>
+<li>
+Fully customizable Django back end with built in Authentication, REST API, and custom models.
+</li>
+<li>
+Products are editable in the admin interface. Just log in as super user, edit products, and re-generate the static site.
+</li>
+<li>
+Uses Redux with easy-peasy for state management. The statically generated content results in less-cluttered redux stores.
+</li>
+<li>
+Simple product tagging system for use in Inferential Machine Learning applications.
+</li>
+</ul>
+
+## Todo:  
+<ul>
+<li>
+Move non static API requests to redux actions and thunks. This will de-clutter the components of the data-fetching logic.
+</li>
+<li>
+Use Bootstrap-React instead of using css.
+</li>
+<li>
+Refactor the toaster
+</li>
+<li>
+ Functions in the store actions that violate the DRY principal must be refactored using side effects.
+</li>
+<li>
+Convert ALL inline styles to .module.css files.
+</li>
+<li>
+Simple recommendation system using product tagging
+</li>
+<li>
+Add react skeleton for when the user is waiting for the images to load.
+</li>
+<li>
+Refactor the AddToCart component.
+</li>
+
+
+
+</ul>
