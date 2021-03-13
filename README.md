@@ -80,16 +80,10 @@ Simple product tagging system for use in Inferential Machine Learning applicatio
 ## Todo:  
 <ul>
 <li>
-Move non static API requests to redux actions and thunks. This will de-clutter the components of the data-fetching logic.
-</li>
-<li>
 Use Bootstrap-React instead of using css.
 </li>
 <li>
 Refactor the toaster
-</li>
-<li>
- Functions in the store actions that violate the DRY principal must be refactored using side effects.
 </li>
 <li>
 Convert ALL inline styles to .module.css files.
@@ -103,7 +97,4 @@ Add react skeleton for when the user is waiting for the images to load.
 <li>
 Refactor the AddToCart component.
 </li>
-
-
-
 </ul>
