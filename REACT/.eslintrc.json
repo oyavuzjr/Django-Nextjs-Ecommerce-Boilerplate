@@ -1,13 +1,11 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
-        "node": true
+        "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "nextjs",
-        "prettier"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -17,9 +15,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react","prettier"
+        "react"
     ],
     "rules": {
-        "jsx-a11y/label-has-associated-control":"off"
     }
 }
