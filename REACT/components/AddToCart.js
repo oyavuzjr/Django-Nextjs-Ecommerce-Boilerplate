@@ -6,7 +6,7 @@ const AddToCart = ({ children, name, id, price, image, size, action="add", useSp
   const [waiting, setWaiting] = useState(false);
   const setCart = useStoreActions((actions) => actions.cart.setCart);
   const token = useStoreState((state) => state.auth.token);
-  const addToCart = useStoreActions((actions) => actions.cart.addToCartGuest);
+  const addToCartGuest = useStoreActions((actions) => actions.cart.addToCartGuest);
   const addItem = useStoreActions(actions=>actions.cart.addItem);
   const setNotification = useStoreActions(
     (actions) => actions.toaster.setNotification
