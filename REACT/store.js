@@ -1,4 +1,4 @@
-import { createStore, action,useStoreActions } from "easy-peasy";
+import { createStore, action,useStoreActions, thunk } from "easy-peasy";
 import { persist } from 'easy-peasy';
 
 const counter = {
@@ -29,7 +29,7 @@ const toaster={
 const cart = {
   items: [],
   itemNum: 0,
-  addToCart: action((state, payload) => {
+  addToCartGuest: action((state, payload) => {
     if (state.items.map((x) => x.id).includes(payload.id)) {
       state.items.forEach((item) => {
         if(item.id===payload.id){
@@ -54,6 +54,33 @@ const cart = {
     state.itemNum = state.items.map((item) =>item.quantity).reduce(function(a, b){
       return a + b;
     }, 0)
+  }),
+  addItem:thunk(async (actions,payload)=>{
+    await fetch(`${process.env.API_ENDPOINT}update-item/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${payload.token}`,
+      },
+      body: JSON.stringify({ action:payload.action, productId: payload.id }),
+    })
+      .then((resp) => {
+        return resp.json();
+      })
+      .then((data) => {
+        setTimeout(function () {
+          payload.popNotification();
+        }, 5000);
+        const newCart = data.map((item) => item.product);
+        data.forEach((item, index) => {
+          newCart[index].quantity = item.quantity;
+        });
+        actions.setCart(newCart);
+        payload.callback(false);
+      })
+      .catch((error) => {
+        console.error(error, "catch the hoop");
+      });
   })
 };
 

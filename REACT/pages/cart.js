@@ -1,20 +1,16 @@
 import Link from "next/link";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import AddToCart from "../components/AddToCart";
 
 const Cart = () => {
-  const setCart = useStoreActions((actions) => actions.cart.setCart);
+  const setCart = useStoreActions(actions => actions.cart.setCart);
   const cart = useStoreState(state => state.cart.items);
   // const updateItem = (e,actionType) => {
   //   const pid=(e.target.getAttribute("productId"));
   //   console.log("oha bufonu");
   //   console.log(actionType);
   // }
-
-
-
-
 
   return (
     <>
@@ -29,13 +25,11 @@ const Cart = () => {
                 <>
                   <p>Your Cart is Empty </p>
                   <p>
-                    <a>
-                      <Link href="/products">Browse our products here :)</Link>
-                    </a>
+                    <Link href="/products">Browse our products here :)</Link>
                   </p>
                 </>
               ) : (
-                cart.map((product,idx) => (
+                cart.map((product, idx) => (
                   <div key={idx}>
                     <div className="row">
                       <div className="col-md-auto">
@@ -52,8 +46,25 @@ const Cart = () => {
                           <br /> <span>${product.price}</span>
                         </h4>
                         <div className="d-inline">
-                        <AddToCart name={product.name} id={product.id} price={product.price} image={product.image} useSpinner={false} action={"remove"}><a type="button" class="btn btn-secondary btn-sm">-</a></AddToCart>
-                        <AddToCart  name={product.name} id={product.id} price={product.price} image={product.image} useSpinner={false} ><a type="button" class="btn btn-primary btn-sm">+</a></AddToCart>
+                          <AddToCart
+                            name={product.name}
+                            id={product.id}
+                            price={product.price}
+                            image={product.image}
+                            useSpinner={false}
+                            action={"remove"}
+                          >
+                            <div className="btn btn-secondary btn-sm">-</div>
+                          </AddToCart>
+                          <AddToCart
+                            name={product.name}
+                            id={product.id}
+                            price={product.price}
+                            image={product.image}
+                            useSpinner={false}
+                          >
+                            <div className="btn btn-primary btn-sm">+</div>
+                          </AddToCart>
                           <span className="ml-2">x{product.quantity}</span>
                         </div>
                       </div>
@@ -69,7 +80,13 @@ const Cart = () => {
           <div className="card text-white bg-primary mb-3">
             <div className="card-header">Checkout</div>
             <div className="card-body">
-              <h4 className="card-title">Your Total is ${(cart.map(item=>item.price*item.quantity).reduce((a, b) => a + b, 0)).toFixed(2)}</h4>
+              <h4 className="card-title">
+                Your Total is $
+                {cart
+                  .map(item => item.price * item.quantity)
+                  .reduce((a, b) => a + b, 0)
+                  .toFixed(2)}
+              </h4>
               <p className="card-text">How would you like to pay?</p>
             </div>
           </div>

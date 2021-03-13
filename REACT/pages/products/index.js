@@ -1,7 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Product from "../../components/Product";
-import Carousel from "../../components/Carousel";
-import { useStoreState, useStoreActions } from "easy-peasy";
 
 const Products = ({products}) => {
   return (
@@ -10,8 +8,9 @@ const Products = ({products}) => {
       <hr />
       <p>Browse our Products!</p>   
       <div className="row">
-      {products.map((product) => (
+      {products.map((product,idx) => (
         <Product
+          key={idx}
           name={product.name}
           id={product.id}
           price={product.price}

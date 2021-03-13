@@ -6,7 +6,8 @@ const AddToCart = ({ children, name, id, price, image, size, action="add", useSp
   const [waiting, setWaiting] = useState(false);
   const setCart = useStoreActions((actions) => actions.cart.setCart);
   const token = useStoreState((state) => state.auth.token);
-  const addToCart = useStoreActions((actions) => actions.cart.addToCart);
+  const addToCart = useStoreActions((actions) => actions.cart.addToCartGuest);
+  const addItem = useStoreActions(actions=>actions.cart.addItem);
   const setNotification = useStoreActions(
     (actions) => actions.toaster.setNotification
   );
@@ -20,43 +21,18 @@ const AddToCart = ({ children, name, id, price, image, size, action="add", useSp
       if(useSpinner){
         setWaiting(true);
       }
-      setNotification({ message: `${name} was ${action==="add"?"added to":"removed from"} cart!`, img: image });
-      const res = () => {
-        fetch(`${process.env.API_ENDPOINT}update-item/`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Token ${token}`,
-          },
-          body: JSON.stringify({ action, productId: id }),
-        })
-          .then((resp) => {
-            return resp.json();
-          })
-          .then((data) => {
-            setWaiting(false);
-            setTimeout(function () {
-              popNotification();
-            }, 5000);
-            const newCart = data.map((item) => item.product);
-            data.forEach((item, index) => {
-              newCart[index].quantity = item.quantity;
-            });
-            setCart(newCart);
-          })
-          .catch((error) => {
-            console.error(error, "catch the hoop");
-          });
-      };
+
       if (token !== "") {
-        res();
+        addItem({action,id,token,"callback":setWaiting,popNotification});
       } else {
-        addToCart({ name, id, price, image, quantity: action==="add"?1:-1 });
+        addToCartGuest({ name, id, price, image, quantity: action==="add"?1:-1 });
         setTimeout(function () {
           popNotification();
         }, 5000);
         setWaiting(false)
       }
+      setNotification({ message: `${name} was ${action==="add"?"added to":"removed from"} cart!`, img: image });
+
     }
   }
   return (
@@ -65,8 +41,8 @@ const AddToCart = ({ children, name, id, price, image, size, action="add", useSp
         <a onClick={handleClick}>{children}</a>
       ) : (
         <div className="text-center">
-        <div class="spinner-border" role="status" style={{"height":size,"width":size,"color":"#c23616"}}>
-          <span class="sr-only">Loading...</span>
+        <div className="spinner-border" role="status" style={{"height":size,"width":size,"color":"#c23616"}}>
+          <span className="sr-only">Loading...</span>
         </div>
         </div>
       )}

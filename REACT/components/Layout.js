@@ -45,17 +45,17 @@ const Layout = ({ children }) => {
                 animate={notifications.length > 0 ? "visible" : "hidden"}
               >
                 <div
-                  class="toast show"
+                  className="toast show"
                   role="alert"
                   aria-live="assertive"
                   aria-atomic="true"
                 >
-                  <div class="toast-header">
-                    <strong class="mr-auto">Success!</strong>
+                  <div className="toast-header">
+                    <strong className="mr-auto">Success!</strong>
                     <small>now</small>
                     <button
                       type="button"
-                      class="ml-2 mb-1 close"
+                      className="ml-2 mb-1 close"
                       data-dismiss="toast"
                       aria-label="Close"
                     >
@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
                   </div>
                   <Link href="/cart">
                     <a>
-                      <div class="toast-body gray-hover">
+                      <div className="toast-body gray-hover">
                         <div className="row">
                           <div className="col col-3 text-center">
                             <img
@@ -91,7 +91,7 @@ const Layout = ({ children }) => {
         <div id="loading-screen">
           <div id="loading-position" className="text-center">
             <div className="spinner-border" style={{height:"5rem",width:"5rem"}} role="status">
-              <span class="sr-only">Loading...</span>
+              <span className="sr-only">Loading...</span>
             </div>
             <div className="mt-4">
             Loading...
