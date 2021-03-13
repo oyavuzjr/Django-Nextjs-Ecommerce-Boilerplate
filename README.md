@@ -83,9 +83,6 @@ Simple product tagging system for use in Inferential Machine Learning applicatio
 Use Bootstrap-React instead of using css.
 </li>
 <li>
-Refactor the toaster
-</li>
-<li>
 Convert ALL inline styles to .module.css files.
 </li>
 <li>
@@ -93,8 +90,5 @@ Simple recommendation system using product tagging
 </li>
 <li>
 Add react skeleton for when the user is waiting for the images to load.
-</li>
-<li>
-Refactor the AddToCart component.
 </li>
 </ul>
