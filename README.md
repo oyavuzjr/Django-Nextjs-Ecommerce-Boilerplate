@@ -1,5 +1,9 @@
 ---
 title: Django-Nextjs-Ecommerce-Boilerplate
+Technology:
+  - Python
+  - Django
+  - React
 ---
 ## Introduction
 <small><a href="https://django-nextjs-ecommerce-boilerplate.talatorhanorhan.repl.co/">check out Live demo here</a></small>
